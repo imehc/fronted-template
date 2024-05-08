@@ -1,15 +1,17 @@
-import React from 'react';
+import { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-import BaseRouter from '~/router/BaseRouter';
+import { RouterProvider } from '@tanstack/react-router';
+import router from './routes/__root';
+import 'virtual:uno.css';
 import '@unocss/reset/normalize.css';
 import './index.css';
-import 'virtual:uno.css';
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <BaseRouter />
-    </BrowserRouter>
-  </React.StrictMode>
-);
+const rootElement = document.getElementById('root')!;
+if (!rootElement.innerHTML) {
+  const root = ReactDOM.createRoot(rootElement);
+  root.render(
+    <StrictMode>
+      <RouterProvider router={router} />
+    </StrictMode>
+  );
+}

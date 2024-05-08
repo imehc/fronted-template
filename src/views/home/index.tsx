@@ -1,8 +1,9 @@
-import React, { type FC } from 'react';
+import { css } from '#/css';
+import { FC } from 'react';
 
-export const PageDashboard: FC = () => {
+const Home: FC = () => {
   return (
-    <React.Fragment>
+    <div className="p-2">
       <div className="w-full flex items-center justify-center gap-x-4 text-4xl p-2 mt-4">
         <div
           className="animate-bounce-alt animate-duration-1s animate-count-infinite i-twemoji-frog "
@@ -13,8 +14,11 @@ export const PageDashboard: FC = () => {
         <div className="i-vscode-icons:file-type-light-pnpm" />
         <div className="i-vscode-icons:file-type-light-pnpm?mask text-red-300" />
       </div>
-    </React.Fragment>
+      <div className={css({ fontSize: '2xl', fontWeight: 'bold' })}>
+        Hello 🐼!
+      </div>
+    </div>
   );
 };
 
-export default PageDashboard;
+export default Home;

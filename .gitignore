@@ -29,3 +29,10 @@ yarn-error.log*
 # visualizer
 stats.html
 
+
+# Panda
+styled-system
+styled-system-studio
+
+# tanstack
+**/routeTree.gen.ts
