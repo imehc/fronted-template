@@ -30,7 +30,7 @@
     "@types/node": "^20.12.12",
     "@types/react": "^18.3.2",
     "@types/react-dom": "^18.2.24",
-    "@unocss/reset": "^0.59.0",
+    "@unocss/reset": "^0.60.2",
     "@vitejs/plugin-react-swc": "^3.6.0",
     "rimraf": "^5.0.7",
     "typescript": "^5.4.5",
