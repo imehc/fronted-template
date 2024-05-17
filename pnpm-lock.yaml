@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@tanstack/react-router':
-    specifier: ^1.28.6
-    version: 1.31.23(react-dom@18.3.1)(react@18.3.1)
+    specifier: ^1.32.13
+    version: 1.32.13(react-dom@18.3.1)(react@18.3.1)
   clsx:
     specifier: ^2.1.0
     version: 2.1.1
@@ -1345,21 +1345,6 @@ packages:
     resolution: {integrity: sha512-rahAZXlR879P7dngDH7BZwGYiODA9D5Hqo6nUHn9GAURcqZU5IW0ZiT54dPtV5EPES7muZZmknReYueDHs7FFQ==}
     engines: {node: '>=12'}
 
-  /@tanstack/react-router@1.31.23(react-dom@18.3.1)(react@18.3.1):
-    resolution: {integrity: sha512-cbax5q5XAfZwFXj8D/wJsZSRJ+rWi+lXvTOcgefTGi5+b+2vdM+VRUik3/zEoNjqGibi5FroEQYUz7yno8yBbw==}
-    engines: {node: '>=12'}
-    peerDependencies:
-      react: '>=16.8'
-      react-dom: '>=16.8'
-    dependencies:
-      '@tanstack/history': 1.31.16
-      '@tanstack/react-store': 0.2.1(react-dom@18.3.1)(react@18.3.1)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      tiny-invariant: 1.3.3
-      tiny-warning: 1.0.3
-    dev: false
-
   /@tanstack/react-router@1.32.11(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-xQUuZbHYQ4V/plK9kUFfKYF+zGP76ybVaD3hlclUMMjU2/fDYxUVsUa2ix5B9doNmmC73VQn3oGyeJKO1nK9fw==}
     engines: {node: '>=12'}
@@ -1374,6 +1359,21 @@ packages:
       tiny-invariant: 1.3.3
       tiny-warning: 1.0.3
     dev: true
+
+  /@tanstack/react-router@1.32.13(react-dom@18.3.1)(react@18.3.1):
+    resolution: {integrity: sha512-J6tiMRsFt91kkczEiuzHidePcPU62GuWGc2gSb9eqRKV17+TRofE4AJ1kM111F5wgDiPTsx4RwFVPU68+JVfAQ==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      react: '>=16.8'
+      react-dom: '>=16.8'
+    dependencies:
+      '@tanstack/history': 1.31.16
+      '@tanstack/react-store': 0.2.1(react-dom@18.3.1)(react@18.3.1)
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      tiny-invariant: 1.3.3
+      tiny-warning: 1.0.3
+    dev: false
 
   /@tanstack/react-store@0.2.1(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-tEbMCQjbeVw9KOP/202LfqZMSNAVi6zYkkp1kBom8nFuMx/965Hzes3+6G6b/comCwVxoJU8Gg9IrcF8yRPthw==}
