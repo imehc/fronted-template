@@ -44,8 +44,8 @@ devDependencies:
     specifier: ^18.3.0
     version: 18.3.0
   '@unocss/reset':
-    specifier: ^0.60.2
-    version: 0.60.2
+    specifier: ^0.60.3
+    version: 0.60.3
   '@vitejs/plugin-react-swc':
     specifier: ^3.6.0
     version: 3.6.0(vite@5.2.11)
@@ -1647,10 +1647,6 @@ packages:
       '@unocss/core': 0.60.3
       '@unocss/preset-mini': 0.60.3
       '@unocss/rule-utils': 0.60.3
-    dev: true
-
-  /@unocss/reset@0.60.2:
-    resolution: {integrity: sha512-kM0DYAcbmzpAyHefa/W+cifBTScWeZGsNpKagMQ6vci6OlTUiDB1GcmhQZ6dC0Ks59GtPmRbzZLaK1MgG6ayrA==}
     dev: true
 
   /@unocss/reset@0.60.3:
