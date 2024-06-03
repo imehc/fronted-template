@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@tanstack/react-router':
-    specifier: ^1.34.5
-    version: 1.34.5(react-dom@18.3.1)(react@18.3.1)
+    specifier: ^1.34.9
+    version: 1.34.9(react-dom@18.3.1)(react@18.3.1)
   clsx:
     specifier: ^2.1.1
     version: 2.1.1
@@ -1360,8 +1360,8 @@ packages:
       tiny-warning: 1.0.3
     dev: true
 
-  /@tanstack/react-router@1.34.5(react-dom@18.3.1)(react@18.3.1):
-    resolution: {integrity: sha512-mOMbNHSJ1cAgRuJj9W35wteQL7zFiCNJYgg3QHkxj+obO9zQWiAwycFs0hQTRxqzGfC+jhVLJe1+cW93BhqKyA==}
+  /@tanstack/react-router@1.34.9(react-dom@18.3.1)(react@18.3.1):
+    resolution: {integrity: sha512-dU7rkiWQTH7glJIcnUcFezkmANzqQwlgRiJFiHJOPjYSoKVGI9dWQMbNc8W5d4JjXB/Nhh0QOiI/+GoYZ3WrhA==}
     engines: {node: '>=12'}
     peerDependencies:
       react: '>=16.8'
