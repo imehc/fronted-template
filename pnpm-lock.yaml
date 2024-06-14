@@ -23,8 +23,8 @@ devDependencies:
     specifier: 1.8.0
     version: 1.8.0
   '@iconify/json':
-    specifier: ^2.2.217
-    version: 2.2.217
+    specifier: ^2.2.219
+    version: 2.2.219
   '@pandacss/dev':
     specifier: ^0.40.1
     version: 0.40.1(typescript@5.4.5)
@@ -1058,8 +1058,8 @@ packages:
     dev: true
     optional: true
 
-  /@iconify/json@2.2.217:
-    resolution: {integrity: sha512-+sSR9iKsoThUmgG4wA9xdtyazROIqMOo5h5otOXYRyOQjMNJCpJltq5hEhHInC5aG/DUQmXDiN/YsCoJdCYUbQ==}
+  /@iconify/json@2.2.219:
+    resolution: {integrity: sha512-q8asqbM61woVZ9rJGm/gvW46i5vdeHrq4TqZQ/5wF5ypk4pAZU9+4qVa5NQE2MZngYkMPeO68PDGGl7WaEV8jQ==}
     dependencies:
       '@iconify/types': 2.0.0
       pathe: 1.1.2
