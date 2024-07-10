@@ -24,18 +24,18 @@
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
     "@iconify/json": "^2.2.226",
-    "@pandacss/dev": "^0.40.1",
-    "@tanstack/router-devtools": "^1.35.1",
+    "@pandacss/dev": "^0.42.0",
+    "@tanstack/router-devtools": "^1.44.0",
     "@tanstack/router-vite-plugin": "^1.43.13",
-    "@types/node": "^20.14.2",
+    "@types/node": "^20.14.10",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "@unocss/reset": "^0.60.4",
+    "@unocss/reset": "^0.61.3",
     "@vitejs/plugin-react-swc": "^3.7.0",
-    "rimraf": "^5.0.7",
-    "typescript": "^5.4.5",
-    "unocss": "^0.60.4",
+    "rimraf": "^6.0.0",
+    "typescript": "^5.5.3",
+    "unocss": "^0.61.3",
     "vite": "^5.3.3",
-    "vitest": "^1.6.0"
+    "vitest": "^2.0.1"
   }
 }
