@@ -26,7 +26,7 @@
     "@iconify/json": "^2.2.226",
     "@pandacss/dev": "^0.42.0",
     "@tanstack/router-devtools": "^1.44.0",
-    "@tanstack/router-vite-plugin": "^1.43.13",
+    "@tanstack/router-vite-plugin": "^1.45.2",
     "@types/node": "^20.14.10",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
