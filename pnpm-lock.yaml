@@ -46,8 +46,8 @@ importers:
         specifier: ^18.3.0
         version: 18.3.0
       '@unocss/reset':
-        specifier: ^0.61.3
-        version: 0.61.3
+        specifier: ^0.61.5
+        version: 0.61.5
       '@vitejs/plugin-react-swc':
         specifier: ^3.7.0
         version: 3.7.0(vite@5.3.3(@types/node@20.14.10)(lightningcss@1.25.1))
@@ -1009,6 +1009,9 @@ packages:
 
   '@unocss/reset@0.61.3':
     resolution: {integrity: sha512-WegQ6Plmr/H0D9wuKCVjhUMzi/xAn55A0mJgUnKl1pJHTZetRdK29u0bnpVQzynmlh/Lh4YtD+X4r8DVkASgPw==}
+
+  '@unocss/reset@0.61.5':
+    resolution: {integrity: sha512-5FKNsHnke9J1Z0T4prOZn9hkWh86c6Px+Oh3xf8mDd6dDw8CjzYMRxZEKti0gt13NcsO29G1vLGM7UjG1sCamg==}
 
   '@unocss/rule-utils@0.61.3':
     resolution: {integrity: sha512-XwzXE6YUAEc1+4TvJruZfntIM7eo+HdQDMlMI289w9YLLAXw973fp00E9U1dR16JRt1BWzlCnnY1RHAqSiXCVw==}
@@ -3219,6 +3222,8 @@ snapshots:
       '@unocss/rule-utils': 0.61.3
 
   '@unocss/reset@0.61.3': {}
+
+  '@unocss/reset@0.61.5': {}
 
   '@unocss/rule-utils@0.61.3':
     dependencies:
