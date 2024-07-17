@@ -25,7 +25,7 @@
     "@biomejs/biome": "1.8.3",
     "@iconify/json": "^2.2.228",
     "@pandacss/dev": "^0.42.0",
-    "@tanstack/router-devtools": "^1.44.0",
+    "@tanstack/router-devtools": "^1.45.4",
     "@tanstack/router-vite-plugin": "^1.45.3",
     "@types/node": "^20.14.11",
     "@types/react": "^18.3.3",
