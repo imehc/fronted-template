@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@tanstack/react-router':
-        specifier: ^1.45.6
-        version: 1.45.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^1.45.10
+        version: 1.45.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -32,7 +32,7 @@ importers:
         version: 0.42.0(typescript@5.5.3)
       '@tanstack/router-devtools':
         specifier: ^1.45.6
-        version: 1.45.6(@tanstack/react-router@1.45.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 1.45.6(@tanstack/react-router@1.45.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@tanstack/router-vite-plugin':
         specifier: ^1.45.3
         version: 1.45.3(vite@5.3.4(@types/node@20.14.11)(lightningcss@1.25.1))
@@ -841,15 +841,15 @@ packages:
     resolution: {integrity: sha512-n4XXInV9irIq0obRvINIkESkGk280Q+xkIIbswmM0z9nAu2wsIRZNvlmPrtYh6bgNWtItOWWoihFUjLTW8g6Jg==}
     engines: {node: '>=12'}
 
-  '@tanstack/react-router@1.45.6':
-    resolution: {integrity: sha512-Gf7dzYKRFukwRTFCcxZO3OkiuKYCtJKxgcsLz/mrGaMmg942Ef38G5Ft3iY4i62Ev0D5QLTarrK6BkIwz/Z72w==}
+  '@tanstack/react-router@1.45.10':
+    resolution: {integrity: sha512-U+HayRjf8BE34GYNDxVp8BWOxbdLkcJ/Yn8bzecR4xO0naBgu4AiCDhfPEIH5LIWfnpm9QhEeohxjpYVM4BjpQ==}
     engines: {node: '>=12'}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  '@tanstack/react-store@0.5.4':
-    resolution: {integrity: sha512-N4fhM+2knUN7t7kIa7lP4Df9vN/DxD8qfmsFgGKis0J/OoeQaEdG6fINjrMME2hOXszObZLXIxBcOvIIcOhGMw==}
+  '@tanstack/react-store@0.5.5':
+    resolution: {integrity: sha512-1orYXGatBqXCYKuroFwV8Ll/6aDa5E3pU6RR4h7RvRk7TmxF1+zLCsWALZaeijXkySNMGmvawSbUXRypivg2XA==}
     peerDependencies:
       react: ^17.0.0 || ^18.0.0
       react-dom: ^17.0.0 || ^18.0.0
@@ -885,8 +885,8 @@ packages:
     resolution: {integrity: sha512-HAZ5F7wtQNBM8MubjEGS8lD+s8bqCVpHgfZuYcWxLmvHlDBJeaw5EAP8AXOt3PXWKwipipghLJ3O7JO3qh5NSg==}
     engines: {node: '>=12'}
 
-  '@tanstack/store@0.5.4':
-    resolution: {integrity: sha512-EG/aGAK/yUJz0JxPaY9wOr1Sjz9Uc//BX7uY9SAo5M0GkCEz7DOSxixBq2afn/reLMGqTIGYq7TkMGgyNQgdcA==}
+  '@tanstack/store@0.5.5':
+    resolution: {integrity: sha512-EOSrgdDAJExbvRZEQ/Xhh9iZchXpMN+ga1Bnk8Nmygzs8TfiE6hbzThF+Pr2G19uHL6+DTDTHhJ8VQiOd7l4tA==}
 
   '@ts-morph/common@0.22.0':
     resolution: {integrity: sha512-HqNBuV/oIlMKdkLshXd1zKBqNQCsuPEsgQOkfFQ/eUKjRlwndXW1AjN9LVkBEIukm00gGXSRmfkl0Wv5VXLnlw==}
@@ -2885,25 +2885,25 @@ snapshots:
 
   '@tanstack/history@1.45.3': {}
 
-  '@tanstack/react-router@1.45.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@tanstack/react-router@1.45.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@tanstack/history': 1.45.3
-      '@tanstack/react-store': 0.5.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@tanstack/react-store': 0.5.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       tiny-invariant: 1.3.3
       tiny-warning: 1.0.3
 
-  '@tanstack/react-store@0.5.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@tanstack/react-store@0.5.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@tanstack/store': 0.5.4
+      '@tanstack/store': 0.5.5
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       use-sync-external-store: 1.2.2(react@18.3.1)
 
-  '@tanstack/router-devtools@1.45.6(@tanstack/react-router@1.45.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@tanstack/router-devtools@1.45.6(@tanstack/react-router@1.45.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@tanstack/react-router': 1.45.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@tanstack/react-router': 1.45.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       clsx: 2.1.1
       goober: 2.1.14(csstype@3.1.3)
       react: 18.3.1
@@ -2949,7 +2949,7 @@ snapshots:
       - vite
       - webpack
 
-  '@tanstack/store@0.5.4': {}
+  '@tanstack/store@0.5.5': {}
 
   '@ts-morph/common@0.22.0':
     dependencies:
