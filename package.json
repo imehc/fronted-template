@@ -34,7 +34,7 @@
     "@vitejs/plugin-react-swc": "^3.7.0",
     "rimraf": "^6.0.1",
     "typescript": "^5.5.4",
-    "unocss": "^0.61.5",
+    "unocss": "^0.61.8",
     "vite": "^5.3.4",
     "vitest": "^2.0.4"
   }
