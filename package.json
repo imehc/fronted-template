@@ -11,7 +11,7 @@
     "lint:fix": "eslint src --fix"
   },
   "dependencies": {
-    "vue": "^3.4.34"
+    "vue": "^3.4.37"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.24.8",
