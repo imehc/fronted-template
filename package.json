@@ -16,7 +16,7 @@
   "devDependencies": {
     "@babel/eslint-parser": "^7.25.1",
     "@iconify/json": "^2.2.239",
-    "@types/node": "^22.4.2",
+    "@types/node": "^22.5.1",
     "@typescript-eslint/eslint-plugin": "^8.2.0",
     "@typescript-eslint/parser": "^8.2.0",
     "@vitejs/plugin-vue": "^5.1.2",
