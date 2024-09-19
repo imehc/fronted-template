@@ -18,7 +18,7 @@
     "@iconify/json": "^2.2.250",
     "@types/node": "^22.5.5",
     "@typescript-eslint/eslint-plugin": "^8.6.0",
-    "@typescript-eslint/parser": "^8.5.0",
+    "@typescript-eslint/parser": "^8.6.0",
     "@vitejs/plugin-vue": "^5.1.4",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.10.0",
