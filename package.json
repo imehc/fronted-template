@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.25.8",
-    "@iconify/json": "^2.2.260",
+    "@iconify/json": "^2.2.261",
     "@types/node": "^22.7.5",
     "@typescript-eslint/eslint-plugin": "^8.10.0",
     "@typescript-eslint/parser": "^8.9.0",
