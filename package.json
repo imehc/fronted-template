@@ -13,7 +13,8 @@
     "coverage": "vitest run --coverage",
     "clean": "rimraf node_modules",
     "prepare": "panda codegen",
-    "lint": "biome check --apply ./src"
+    "format": "biome format ./src --write",
+    "lint": "biome lint ./src --write"
   },
   "dependencies": {
     "@tanstack/react-router": "^1.76.1",
