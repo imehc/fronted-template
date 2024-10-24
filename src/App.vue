@@ -1,13 +1,18 @@
-<script setup lang="ts">
-onMounted(() => {
-  console.log("hello");
-});
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <div className="text-3xl font-bold underline text-orange-500 m-10">
-    <i-emojione-v1-panda-face />
-  </div>
+  <header>
+    <HelloWorld content="hello world" :year="new Date().getDay()" />
+    <hr />
+    <div class="wrapper">
+      <nav class="flex gap-x-3">
+        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/about">About</RouterLink>
+      </nav>
+    </div>
+  </header>
+  <hr />
+  <RouterView />
 </template>
 
 <style scoped></style>
