@@ -24,7 +24,7 @@
     "@iconify/json": "^2.2.265",
     "@tsconfig/node20": "^20.1.4",
     "@types/jsdom": "^21.1.7",
-    "@types/node": "^22.8.2",
+    "@types/node": "^22.8.4",
     "@vitejs/plugin-vue": "^5.1.4",
     "@vitest/eslint-plugin": "^1.1.7",
     "@vue/eslint-config-prettier": "^10.1.0",
