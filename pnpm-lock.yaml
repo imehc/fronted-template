@@ -25,8 +25,8 @@ importers:
         specifier: 1.9.4
         version: 1.9.4
       '@iconify/json':
-        specifier: ^2.2.273
-        version: 2.2.273
+        specifier: ^2.2.274
+        version: 2.2.274
       '@pandacss/dev':
         specifier: ^0.48.0
         version: 0.48.0(typescript@5.6.3)
@@ -651,8 +651,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@iconify/json@2.2.273':
-    resolution: {integrity: sha512-HTnvNpfeFxrMu39VaSTU+UE+ai75Yxa5BbuHmQz9EAtgyPqTqxLgBXPX1sPeMQP8Fxc2X9UrmDwbH5dOEaWthw==}
+  '@iconify/json@2.2.274':
+    resolution: {integrity: sha512-wU4zS3eMLZgPFHieCRGile/sVz7QXD3jiCaaQ72quMH4Tf8FzO2WH10un1g96YaNLY8CTKDV4MNZDO2/LtkwFA==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -2523,7 +2523,7 @@ snapshots:
   '@esbuild/win32-x64@0.23.0':
     optional: true
 
-  '@iconify/json@2.2.273':
+  '@iconify/json@2.2.274':
     dependencies:
       '@iconify/types': 2.0.0
       pathe: 1.1.2
