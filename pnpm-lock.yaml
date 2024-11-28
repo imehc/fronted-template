@@ -49,8 +49,8 @@ importers:
         specifier: ^0.64.1
         version: 0.64.1
       '@vitejs/plugin-react-swc':
-        specifier: ^3.7.1
-        version: 3.7.1(vite@5.4.11(@types/node@22.10.0)(lightningcss@1.25.1))
+        specifier: ^3.7.2
+        version: 3.7.2(vite@5.4.11(@types/node@22.10.0)(lightningcss@1.25.1))
       rimraf:
         specifier: ^6.0.1
         version: 6.0.1
@@ -1083,10 +1083,10 @@ packages:
     peerDependencies:
       vite: ^2.9.0 || ^3.0.0-0 || ^4.0.0 || ^5.0.0-0
 
-  '@vitejs/plugin-react-swc@3.7.1':
-    resolution: {integrity: sha512-vgWOY0i1EROUK0Ctg1hwhtC3SdcDjZcdit4Ups4aPkDcB1jYhmo+RMYWY87cmXMhvtD5uf8lV89j2w16vkdSVg==}
+  '@vitejs/plugin-react-swc@3.7.2':
+    resolution: {integrity: sha512-y0byko2b2tSVVf5Gpng1eEhX1OvPC7x8yns1Fx8jDzlJp4LS6CMkCPfLw47cjyoMrshQDoQw4qcgjsU9VvlCew==}
     peerDependencies:
-      vite: ^4 || ^5
+      vite: ^4 || ^5 || ^6
 
   '@vitest/expect@2.1.6':
     resolution: {integrity: sha512-9M1UR9CAmrhJOMoSwVnPh2rELPKhYo0m/CSgqw9PyStpxtkwhmdM6XYlXGKeYyERY1N6EIuzkQ7e3Lm1WKCoUg==}
@@ -3127,7 +3127,7 @@ snapshots:
       - supports-color
       - vue
 
-  '@vitejs/plugin-react-swc@3.7.1(vite@5.4.11(@types/node@22.10.0)(lightningcss@1.25.1))':
+  '@vitejs/plugin-react-swc@3.7.2(vite@5.4.11(@types/node@22.10.0)(lightningcss@1.25.1))':
     dependencies:
       '@swc/core': 1.7.26
       vite: 5.4.11(@types/node@22.10.0)(lightningcss@1.25.1)
