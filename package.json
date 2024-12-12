@@ -48,7 +48,7 @@
     "unplugin-vue-components": "^0.27.5",
     "vite": "^6.0.1",
     "vite-plugin-inspect": "^0.10.3",
-    "vite-plugin-vue-devtools": "^7.6.7",
+    "vite-plugin-vue-devtools": "^7.6.8",
     "vitest": "^2.1.8",
     "vue-eslint-parser": "^9.4.3",
     "vue-tsc": "^2.1.10"
