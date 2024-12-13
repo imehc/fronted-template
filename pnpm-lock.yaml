@@ -34,8 +34,8 @@ importers:
         specifier: ^1.87.3
         version: 1.87.3(@tanstack/react-router@1.87.9(@tanstack/router-generator@1.87.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@tanstack/router-vite-plugin':
-        specifier: ^1.87.7
-        version: 1.87.7(vite@6.0.3(@types/node@22.10.2)(jiti@1.21.6)(lightningcss@1.25.1)(tsx@4.19.2))
+        specifier: ^1.87.13
+        version: 1.87.13(vite@6.0.3(@types/node@22.10.2)(jiti@1.21.6)(lightningcss@1.25.1)(tsx@4.19.2))
       '@types/node':
         specifier: ^22.10.2
         version: 22.10.2
@@ -78,10 +78,6 @@ packages:
 
   '@antfu/utils@0.7.10':
     resolution: {integrity: sha512-+562v9k4aI80m1+VuMHehNJWLOFjBnXn3tdOitzD0il5b7smkSBal4+a3oKiQTbrwMmN/TBUMDvbdoWDehgOww==}
-
-  '@babel/code-frame@7.26.0':
-    resolution: {integrity: sha512-INCKxTtbXtcNbUZ3YXutwMpEleqttcswhAdee7dhuoVrD2cnuc3PqtERBtxkX5nziX9vnBL8WXmSGwv8CuPV6g==}
-    engines: {node: '>=6.9.0'}
 
   '@babel/code-frame@7.26.2':
     resolution: {integrity: sha512-RJlIHRueQgwWitWgF8OdFYGZX328Ax5BCemNGlqHfplnRT9ESi8JkFlvaVYbS+UubVY6dpv87Fs2u5M29iNFVQ==}
@@ -133,11 +129,6 @@ packages:
     resolution: {integrity: sha512-tbhNuIxNcVb21pInl3ZSjksLCvgdZy9KwJ8brv993QtIVKJBBkYXz4q4ZbAv31GdnC+R90np23L5FbEBlthAEw==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/parser@7.26.2':
-    resolution: {integrity: sha512-DWMCZH9WA4Maitz2q21SRKHo9QXZxkDsbNZoVD62gusNtNBBqDg9i7uOhASfTfIGNzW+O+r7+jAlM8dwphcJKQ==}
-    engines: {node: '>=6.0.0'}
-    hasBin: true
-
   '@babel/parser@7.26.3':
     resolution: {integrity: sha512-WJ/CvmY8Mea8iDXo6a7RK2wbmJITT5fN3BEkRuFlxVyNx8jOKIIhmC4fSkTcPcf8JyavbBwIe6OpiCOBXt/IcA==}
     engines: {node: '>=6.0.0'}
@@ -161,10 +152,6 @@ packages:
 
   '@babel/traverse@7.26.4':
     resolution: {integrity: sha512-fH+b7Y4p3yqvApJALCPJcwb0/XaOSgtK4pzV6WVjPR5GLFQBRI7pfoX2V2iM48NXvX07NUxxm1Vw98YjqTcU5w==}
-    engines: {node: '>=6.9.0'}
-
-  '@babel/types@7.26.0':
-    resolution: {integrity: sha512-Z/yiTPj+lDVnF7lWeKCIJzaIkI0vYO87dMpZ4bg4TDrFe4XXLFWL1TbXU27gBP3QccxV9mZICCrnjnYlJjXHOA==}
     engines: {node: '>=6.9.0'}
 
   '@babel/types@7.26.3':
@@ -1111,8 +1098,8 @@ packages:
     resolution: {integrity: sha512-w9Px1C6DM0YNVXvu1VjUuZ5el0ykOeofEmEZBW83VUTzvCXFpcjPCHncU9FO9uXup8NFIxNfGz+xpwf93GoFnQ==}
     engines: {node: '>=12'}
 
-  '@tanstack/router-plugin@1.87.7':
-    resolution: {integrity: sha512-3QdDyanjZkGW9yqqiDbjrFIEnrDpJGydNB5pawTbv2UsWO3vXQfzFY6wYuUZGjbXjXxXZ+C0H2f/igIP0dDDqg==}
+  '@tanstack/router-plugin@1.87.13':
+    resolution: {integrity: sha512-h5dD0m5ixSsmIMOrNXd4NBH2Fwx+4Mb5GK0JCUVlcegjtNQ9Zx9kdWqWXi+4P595XKCmjdHVOP4vhBr9cfwozg==}
     engines: {node: '>=12'}
     peerDependencies:
       '@rsbuild/core': '>=1.0.2'
@@ -1126,8 +1113,8 @@ packages:
       webpack:
         optional: true
 
-  '@tanstack/router-vite-plugin@1.87.7':
-    resolution: {integrity: sha512-0JlW0HfCafomLUdieaCbDK2UjfwXn77+OaDFUDrQULxDrqtj9BWL+sUXvLdyQGzxmbhAtGO5Q4YGsj0SweuEFg==}
+  '@tanstack/router-vite-plugin@1.87.13':
+    resolution: {integrity: sha512-CwNoMVZa/UA9YMpj2CtNRKU0x/77KsazjJJQHOK0Qq38BvgTxNi5bp8oAgCO512YO2tOclLEKOEEPI/rqNHK8g==}
     engines: {node: '>=12'}
 
   '@tanstack/store@0.6.0':
@@ -2351,12 +2338,6 @@ snapshots:
 
   '@antfu/utils@0.7.10': {}
 
-  '@babel/code-frame@7.26.0':
-    dependencies:
-      '@babel/helper-validator-identifier': 7.25.9
-      js-tokens: 4.0.0
-      picocolors: 1.1.1
-
   '@babel/code-frame@7.26.2':
     dependencies:
       '@babel/helper-validator-identifier': 7.25.9
@@ -2368,7 +2349,7 @@ snapshots:
   '@babel/core@7.26.0':
     dependencies:
       '@ampproject/remapping': 2.3.0
-      '@babel/code-frame': 7.26.0
+      '@babel/code-frame': 7.26.2
       '@babel/generator': 7.26.3
       '@babel/helper-compilation-targets': 7.25.9
       '@babel/helper-module-transforms': 7.26.0(@babel/core@7.26.0)
@@ -2430,10 +2411,6 @@ snapshots:
       '@babel/template': 7.25.9
       '@babel/types': 7.26.3
 
-  '@babel/parser@7.26.2':
-    dependencies:
-      '@babel/types': 7.26.0
-
   '@babel/parser@7.26.3':
     dependencies:
       '@babel/types': 7.26.3
@@ -2450,7 +2427,7 @@ snapshots:
 
   '@babel/template@7.25.9':
     dependencies:
-      '@babel/code-frame': 7.26.0
+      '@babel/code-frame': 7.26.2
       '@babel/parser': 7.26.3
       '@babel/types': 7.26.3
 
@@ -2465,11 +2442,6 @@ snapshots:
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
-
-  '@babel/types@7.26.0':
-    dependencies:
-      '@babel/helper-string-parser': 7.25.9
-      '@babel/helper-validator-identifier': 7.25.9
 
   '@babel/types@7.26.3':
     dependencies:
@@ -3188,7 +3160,7 @@ snapshots:
       tsx: 4.19.2
       zod: 3.23.8
 
-  '@tanstack/router-plugin@1.87.7(vite@6.0.3(@types/node@22.10.2)(jiti@1.21.6)(lightningcss@1.25.1)(tsx@4.19.2))':
+  '@tanstack/router-plugin@1.87.13(vite@6.0.3(@types/node@22.10.2)(jiti@1.21.6)(lightningcss@1.25.1)(tsx@4.19.2))':
     dependencies:
       '@babel/core': 7.26.0
       '@babel/generator': 7.26.3
@@ -3213,9 +3185,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@tanstack/router-vite-plugin@1.87.7(vite@6.0.3(@types/node@22.10.2)(jiti@1.21.6)(lightningcss@1.25.1)(tsx@4.19.2))':
+  '@tanstack/router-vite-plugin@1.87.13(vite@6.0.3(@types/node@22.10.2)(jiti@1.21.6)(lightningcss@1.25.1)(tsx@4.19.2))':
     dependencies:
-      '@tanstack/router-plugin': 1.87.7(vite@6.0.3(@types/node@22.10.2)(jiti@1.21.6)(lightningcss@1.25.1)(tsx@4.19.2))
+      '@tanstack/router-plugin': 1.87.13(vite@6.0.3(@types/node@22.10.2)(jiti@1.21.6)(lightningcss@1.25.1)(tsx@4.19.2))
     transitivePeerDependencies:
       - '@rsbuild/core'
       - supports-color
@@ -3473,7 +3445,7 @@ snapshots:
 
   '@vue/compiler-core@3.4.19':
     dependencies:
-      '@babel/parser': 7.26.2
+      '@babel/parser': 7.26.3
       '@vue/shared': 3.4.19
       entities: 4.5.0
       estree-walker: 2.0.2
@@ -3499,7 +3471,7 @@ snapshots:
 
   '@vue/compiler-sfc@3.4.19':
     dependencies:
-      '@babel/parser': 7.26.2
+      '@babel/parser': 7.26.3
       '@vue/compiler-core': 3.4.19
       '@vue/compiler-dom': 3.4.19
       '@vue/compiler-ssr': 3.4.19
