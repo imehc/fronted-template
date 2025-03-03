@@ -29,7 +29,7 @@ importers:
         version: 2.2.312
       '@pandacss/dev':
         specifier: ^0.53.0
-        version: 0.53.0(typescript@5.7.3)
+        version: 0.53.0(typescript@5.8.2)
       '@tanstack/router-devtools':
         specifier: ^1.112.6
         version: 1.112.6(@tanstack/react-router@1.112.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(csstype@3.1.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -55,11 +55,11 @@ importers:
         specifier: ^6.0.1
         version: 6.0.1
       typescript:
-        specifier: ^5.7.3
-        version: 5.7.3
+        specifier: ^5.8.2
+        version: 5.8.2
       unocss:
         specifier: ^66.0.0
-        version: 66.0.0(postcss@8.4.49)(vite@6.2.0(@types/node@22.13.8)(jiti@2.4.2)(lightningcss@1.25.1)(tsx@4.19.3))(vue@3.5.12(typescript@5.7.3))
+        version: 66.0.0(postcss@8.4.49)(vite@6.2.0(@types/node@22.13.8)(jiti@2.4.2)(lightningcss@1.25.1)(tsx@4.19.3))(vue@3.5.12(typescript@5.8.2))
       vite:
         specifier: ^6.2.0
         version: 6.2.0(@types/node@22.13.8)(jiti@2.4.2)(lightningcss@1.25.1)(tsx@4.19.3)
@@ -1899,8 +1899,8 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-  typescript@5.7.3:
-    resolution: {integrity: sha512-84MVSjMEHP+FQRPy3pX9sTVV/INIex71s9TL2Gm5FG/WG1SqXeKyZ0k7/blY/4FdOzI12CBy1vGc4og/eus0fw==}
+  typescript@5.8.2:
+    resolution: {integrity: sha512-aJn6wq13/afZp/jT9QZmwEjDqqvSGp1VT5GVg+f/t6/oVyrgXM6BY1h9BRh/O5p3PlUPAe+WuiEZOmb/49RqoQ==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -2492,13 +2492,13 @@ snapshots:
       postcss-selector-parser: 6.1.2
       ts-pattern: 5.0.8
 
-  '@pandacss/dev@0.53.0(typescript@5.7.3)':
+  '@pandacss/dev@0.53.0(typescript@5.8.2)':
     dependencies:
       '@clack/prompts': 0.9.1
       '@pandacss/config': 0.53.0
       '@pandacss/logger': 0.53.0
-      '@pandacss/node': 0.53.0(typescript@5.7.3)
-      '@pandacss/postcss': 0.53.0(typescript@5.7.3)
+      '@pandacss/node': 0.53.0(typescript@5.8.2)
+      '@pandacss/postcss': 0.53.0(typescript@5.8.2)
       '@pandacss/preset-panda': 0.53.0
       '@pandacss/shared': 0.53.0
       '@pandacss/token-dictionary': 0.53.0
@@ -2508,10 +2508,10 @@ snapshots:
       - jsdom
       - typescript
 
-  '@pandacss/extractor@0.53.0(typescript@5.7.3)':
+  '@pandacss/extractor@0.53.0(typescript@5.8.2)':
     dependencies:
       '@pandacss/shared': 0.53.0
-      ts-evaluator: 1.2.0(typescript@5.7.3)
+      ts-evaluator: 1.2.0(typescript@5.8.2)
       ts-morph: 24.0.0
     transitivePeerDependencies:
       - jsdom
@@ -2538,13 +2538,13 @@ snapshots:
       '@pandacss/types': 0.53.0
       kleur: 4.1.5
 
-  '@pandacss/node@0.53.0(typescript@5.7.3)':
+  '@pandacss/node@0.53.0(typescript@5.8.2)':
     dependencies:
       '@pandacss/config': 0.53.0
       '@pandacss/core': 0.53.0
       '@pandacss/generator': 0.53.0
       '@pandacss/logger': 0.53.0
-      '@pandacss/parser': 0.53.0(typescript@5.7.3)
+      '@pandacss/parser': 0.53.0(typescript@5.8.2)
       '@pandacss/reporter': 0.53.0
       '@pandacss/shared': 0.53.0
       '@pandacss/token-dictionary': 0.53.0
@@ -2566,16 +2566,16 @@ snapshots:
       prettier: 3.2.5
       ts-morph: 24.0.0
       ts-pattern: 5.0.8
-      tsconfck: 3.0.2(typescript@5.7.3)
+      tsconfck: 3.0.2(typescript@5.8.2)
     transitivePeerDependencies:
       - jsdom
       - typescript
 
-  '@pandacss/parser@0.53.0(typescript@5.7.3)':
+  '@pandacss/parser@0.53.0(typescript@5.8.2)':
     dependencies:
       '@pandacss/config': 0.53.0
       '@pandacss/core': 0.53.0
-      '@pandacss/extractor': 0.53.0(typescript@5.7.3)
+      '@pandacss/extractor': 0.53.0(typescript@5.8.2)
       '@pandacss/logger': 0.53.0
       '@pandacss/shared': 0.53.0
       '@pandacss/types': 0.53.0
@@ -2587,9 +2587,9 @@ snapshots:
       - jsdom
       - typescript
 
-  '@pandacss/postcss@0.53.0(typescript@5.7.3)':
+  '@pandacss/postcss@0.53.0(typescript@5.8.2)':
     dependencies:
-      '@pandacss/node': 0.53.0(typescript@5.7.3)
+      '@pandacss/node': 0.53.0(typescript@5.8.2)
       postcss: 8.4.49
     transitivePeerDependencies:
       - jsdom
@@ -2872,11 +2872,11 @@ snapshots:
     dependencies:
       csstype: 3.1.3
 
-  '@unocss/astro@66.0.0(vite@6.2.0(@types/node@22.13.8)(jiti@2.4.2)(lightningcss@1.25.1)(tsx@4.19.3))(vue@3.5.12(typescript@5.7.3))':
+  '@unocss/astro@66.0.0(vite@6.2.0(@types/node@22.13.8)(jiti@2.4.2)(lightningcss@1.25.1)(tsx@4.19.3))(vue@3.5.12(typescript@5.8.2))':
     dependencies:
       '@unocss/core': 66.0.0
       '@unocss/reset': 66.0.0
-      '@unocss/vite': 66.0.0(vite@6.2.0(@types/node@22.13.8)(jiti@2.4.2)(lightningcss@1.25.1)(tsx@4.19.3))(vue@3.5.12(typescript@5.7.3))
+      '@unocss/vite': 66.0.0(vite@6.2.0(@types/node@22.13.8)(jiti@2.4.2)(lightningcss@1.25.1)(tsx@4.19.3))(vue@3.5.12(typescript@5.8.2))
     optionalDependencies:
       vite: 6.2.0(@types/node@22.13.8)(jiti@2.4.2)(lightningcss@1.25.1)(tsx@4.19.3)
     transitivePeerDependencies:
@@ -2909,14 +2909,14 @@ snapshots:
     dependencies:
       '@unocss/core': 66.0.0
 
-  '@unocss/inspector@66.0.0(vue@3.5.12(typescript@5.7.3))':
+  '@unocss/inspector@66.0.0(vue@3.5.12(typescript@5.8.2))':
     dependencies:
       '@unocss/core': 66.0.0
       '@unocss/rule-utils': 66.0.0
       colorette: 2.0.20
       gzip-size: 6.0.0
       sirv: 3.0.1
-      vue-flow-layout: 0.1.1(vue@3.5.12(typescript@5.7.3))
+      vue-flow-layout: 0.1.1(vue@3.5.12(typescript@5.8.2))
     transitivePeerDependencies:
       - vue
 
@@ -3003,12 +3003,12 @@ snapshots:
     dependencies:
       '@unocss/core': 66.0.0
 
-  '@unocss/vite@66.0.0(vite@6.2.0(@types/node@22.13.8)(jiti@2.4.2)(lightningcss@1.25.1)(tsx@4.19.3))(vue@3.5.12(typescript@5.7.3))':
+  '@unocss/vite@66.0.0(vite@6.2.0(@types/node@22.13.8)(jiti@2.4.2)(lightningcss@1.25.1)(tsx@4.19.3))(vue@3.5.12(typescript@5.8.2))':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@unocss/config': 66.0.0
       '@unocss/core': 66.0.0
-      '@unocss/inspector': 66.0.0(vue@3.5.12(typescript@5.7.3))
+      '@unocss/inspector': 66.0.0(vue@3.5.12(typescript@5.8.2))
       chokidar: 3.6.0
       magic-string: 0.30.17
       tinyglobby: 0.2.12
@@ -3140,11 +3140,11 @@ snapshots:
       '@vue/shared': 3.5.12
       csstype: 3.1.3
 
-  '@vue/server-renderer@3.5.12(vue@3.5.12(typescript@5.7.3))':
+  '@vue/server-renderer@3.5.12(vue@3.5.12(typescript@5.8.2))':
     dependencies:
       '@vue/compiler-ssr': 3.5.12
       '@vue/shared': 3.5.12
-      vue: 3.5.12(typescript@5.7.3)
+      vue: 3.5.12(typescript@5.8.2)
 
   '@vue/shared@3.4.19': {}
 
@@ -3891,12 +3891,12 @@ snapshots:
 
   totalist@3.0.1: {}
 
-  ts-evaluator@1.2.0(typescript@5.7.3):
+  ts-evaluator@1.2.0(typescript@5.8.2):
     dependencies:
       ansi-colors: 4.1.3
       crosspath: 2.0.0
       object-path: 0.11.8
-      typescript: 5.7.3
+      typescript: 5.8.2
 
   ts-morph@24.0.0:
     dependencies:
@@ -3905,9 +3905,9 @@ snapshots:
 
   ts-pattern@5.0.8: {}
 
-  tsconfck@3.0.2(typescript@5.7.3):
+  tsconfck@3.0.2(typescript@5.8.2):
     optionalDependencies:
-      typescript: 5.7.3
+      typescript: 5.8.2
 
   tsx@4.19.3:
     dependencies:
@@ -3918,7 +3918,7 @@ snapshots:
 
   typescript@5.6.2: {}
 
-  typescript@5.7.3: {}
+  typescript@5.8.2: {}
 
   ufo@1.5.4: {}
 
@@ -3932,9 +3932,9 @@ snapshots:
 
   universalify@2.0.1: {}
 
-  unocss@66.0.0(postcss@8.4.49)(vite@6.2.0(@types/node@22.13.8)(jiti@2.4.2)(lightningcss@1.25.1)(tsx@4.19.3))(vue@3.5.12(typescript@5.7.3)):
+  unocss@66.0.0(postcss@8.4.49)(vite@6.2.0(@types/node@22.13.8)(jiti@2.4.2)(lightningcss@1.25.1)(tsx@4.19.3))(vue@3.5.12(typescript@5.8.2)):
     dependencies:
-      '@unocss/astro': 66.0.0(vite@6.2.0(@types/node@22.13.8)(jiti@2.4.2)(lightningcss@1.25.1)(tsx@4.19.3))(vue@3.5.12(typescript@5.7.3))
+      '@unocss/astro': 66.0.0(vite@6.2.0(@types/node@22.13.8)(jiti@2.4.2)(lightningcss@1.25.1)(tsx@4.19.3))(vue@3.5.12(typescript@5.8.2))
       '@unocss/cli': 66.0.0
       '@unocss/core': 66.0.0
       '@unocss/postcss': 66.0.0(postcss@8.4.49)
@@ -3951,7 +3951,7 @@ snapshots:
       '@unocss/transformer-compile-class': 66.0.0
       '@unocss/transformer-directives': 66.0.0
       '@unocss/transformer-variant-group': 66.0.0
-      '@unocss/vite': 66.0.0(vite@6.2.0(@types/node@22.13.8)(jiti@2.4.2)(lightningcss@1.25.1)(tsx@4.19.3))(vue@3.5.12(typescript@5.7.3))
+      '@unocss/vite': 66.0.0(vite@6.2.0(@types/node@22.13.8)(jiti@2.4.2)(lightningcss@1.25.1)(tsx@4.19.3))(vue@3.5.12(typescript@5.8.2))
     optionalDependencies:
       vite: 6.2.0(@types/node@22.13.8)(jiti@2.4.2)(lightningcss@1.25.1)(tsx@4.19.3)
     transitivePeerDependencies:
@@ -4058,19 +4058,19 @@ snapshots:
       - tsx
       - yaml
 
-  vue-flow-layout@0.1.1(vue@3.5.12(typescript@5.7.3)):
+  vue-flow-layout@0.1.1(vue@3.5.12(typescript@5.8.2)):
     dependencies:
-      vue: 3.5.12(typescript@5.7.3)
+      vue: 3.5.12(typescript@5.8.2)
 
-  vue@3.5.12(typescript@5.7.3):
+  vue@3.5.12(typescript@5.8.2):
     dependencies:
       '@vue/compiler-dom': 3.5.12
       '@vue/compiler-sfc': 3.5.12
       '@vue/runtime-dom': 3.5.12
-      '@vue/server-renderer': 3.5.12(vue@3.5.12(typescript@5.7.3))
+      '@vue/server-renderer': 3.5.12(vue@3.5.12(typescript@5.8.2))
       '@vue/shared': 3.5.12
     optionalDependencies:
-      typescript: 5.7.3
+      typescript: 5.8.2
 
   webpack-virtual-modules@0.6.2: {}
 
