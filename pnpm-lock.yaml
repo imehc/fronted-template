@@ -34,8 +34,8 @@ importers:
         specifier: ^1.112.6
         version: 1.112.6(@tanstack/react-router@1.112.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(csstype@3.1.3)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@tanstack/router-vite-plugin':
-        specifier: ^1.112.0
-        version: 1.112.0(@tanstack/react-router@1.112.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(vite@6.2.0(@types/node@22.13.8)(jiti@2.4.2)(lightningcss@1.25.1)(tsx@4.19.3))
+        specifier: ^1.112.3
+        version: 1.112.3(@tanstack/react-router@1.112.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(vite@6.2.0(@types/node@22.13.8)(jiti@2.4.2)(lightningcss@1.25.1)(tsx@4.19.3))
       '@types/node':
         specifier: ^22.13.8
         version: 22.13.8
@@ -819,8 +819,8 @@ packages:
       csstype:
         optional: true
 
-  '@tanstack/router-generator@1.112.0':
-    resolution: {integrity: sha512-c1wA2TMfmL1igw6OFKdOZVrFqAJ/PB3ZJE0+upofmwVydUMH7tipvmztWGiRmcxGd66sl6o1l1X39308ObwAGQ==}
+  '@tanstack/router-generator@1.112.3':
+    resolution: {integrity: sha512-RUT+O/j7YIjbemVJjkP4qM8MYaaOltKYhyp9VGtcWxWGS8U2QDwC9UsskjBVOj7QV7aq3UcnExicABwK/AMCCQ==}
     engines: {node: '>=12'}
     peerDependencies:
       '@tanstack/react-router': ^1.112.0
@@ -828,8 +828,8 @@ packages:
       '@tanstack/react-router':
         optional: true
 
-  '@tanstack/router-plugin@1.112.0':
-    resolution: {integrity: sha512-0ZFbHqAHtvbJzdDlIuxuJiOcbR5oue9IVA5OR93gS7sPCueZI1uZQB/hdtC+kcpdnYQKDcxjeNranhqbcaZZnQ==}
+  '@tanstack/router-plugin@1.112.3':
+    resolution: {integrity: sha512-XhKXFoJ7eajqghAPwHXfggyB8khopr5yVXiYQRiL+9Gek2q5M8N4z9+Uh2MM31KjTuiaJ72lZpUgT5FDj1m6Tg==}
     engines: {node: '>=12'}
     peerDependencies:
       '@rsbuild/core': '>=1.0.2'
@@ -853,8 +853,8 @@ packages:
     resolution: {integrity: sha512-Uwl2nbrxhCzviaHHBLNPhSC/OMpZLdOTxTJndUSsXTzWUP4IoQcVmngaIsxi9iriE3ArC1VXuanUAkfGmimNOQ==}
     engines: {node: '>=12'}
 
-  '@tanstack/router-vite-plugin@1.112.0':
-    resolution: {integrity: sha512-yqrsjBgf5yOF7dJJULaOu1OPQc8TKZMZKi4R2AFT7FEyTFQF4ba9s2W9Eou+k7pC/QYYpbNXZDWDrGSj+vdDUA==}
+  '@tanstack/router-vite-plugin@1.112.3':
+    resolution: {integrity: sha512-ietl8MXWXN9xFgCVQwLr910YOFGE7XMoiDP4EfbiuPN9LHX44s2RBsiOYnxsHXZ4WFwlQv8HKDyuOxLcldTE3w==}
     engines: {node: '>=12'}
 
   '@tanstack/store@0.7.0':
@@ -1085,8 +1085,8 @@ packages:
     resolution: {integrity: sha512-bN798gFfQX+viw3R7yrGWRqnrN2oRkEkUjjl4JNn4E8GxxbjtG3FbrEIIY3l8/hrwUwIeCZvi4QuOTP4MErVug==}
     engines: {node: '>=12'}
 
-  ansis@3.16.0:
-    resolution: {integrity: sha512-sU7d/tfZiYrsIAXbdL/CNZld5bCkruzwT5KmqmadCJYxuLxHAOBjidxD5+iLmN/6xEfjcQq1l7OpsiCBlc4LzA==}
+  ansis@3.17.0:
+    resolution: {integrity: sha512-0qWUglt9JEqLFr3w1I1pbrChn1grhaiAR2ocX1PP/flRmxgtwTzPFFFnfIlD6aMOLQZgSuCRlidD70lvx8yhzg==}
     engines: {node: '>=14'}
 
   anymatch@3.1.3:
@@ -1715,8 +1715,8 @@ packages:
     engines: {node: '>=14'}
     hasBin: true
 
-  prettier@3.5.2:
-    resolution: {integrity: sha512-lc6npv5PH7hVqozBR7lkBNOGXV9vMwROAPlumdBkX0wTbbzPu/U1hk5yL8p2pt4Xoc+2mkT8t/sow2YrV/M5qg==}
+  prettier@3.5.3:
+    resolution: {integrity: sha512-QQtaxnoDJeAkDvDKWCLiwIXkTgRhwYDEQCghU9Z6q03iyek/rxRh/2lC3HB7P8sWT2xC/y5JDctPLBIGzHKbhw==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -2773,16 +2773,16 @@ snapshots:
     optionalDependencies:
       csstype: 3.1.3
 
-  '@tanstack/router-generator@1.112.0(@tanstack/react-router@1.112.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))':
+  '@tanstack/router-generator@1.112.3(@tanstack/react-router@1.112.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))':
     dependencies:
       '@tanstack/virtual-file-routes': 1.99.0
-      prettier: 3.5.2
+      prettier: 3.5.3
       tsx: 4.19.3
       zod: 3.24.2
     optionalDependencies:
       '@tanstack/react-router': 1.112.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
 
-  '@tanstack/router-plugin@1.112.0(@tanstack/react-router@1.112.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(vite@6.2.0(@types/node@22.13.8)(jiti@2.4.2)(lightningcss@1.25.1)(tsx@4.19.3))':
+  '@tanstack/router-plugin@1.112.3(@tanstack/react-router@1.112.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(vite@6.2.0(@types/node@22.13.8)(jiti@2.4.2)(lightningcss@1.25.1)(tsx@4.19.3))':
     dependencies:
       '@babel/core': 7.26.9
       '@babel/plugin-syntax-jsx': 7.25.9(@babel/core@7.26.9)
@@ -2791,7 +2791,7 @@ snapshots:
       '@babel/traverse': 7.26.9
       '@babel/types': 7.26.9
       '@tanstack/router-core': 1.112.0
-      '@tanstack/router-generator': 1.112.0(@tanstack/react-router@1.112.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))
+      '@tanstack/router-generator': 1.112.3(@tanstack/react-router@1.112.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))
       '@tanstack/router-utils': 1.102.2
       '@tanstack/virtual-file-routes': 1.99.0
       '@types/babel__core': 7.20.5
@@ -2811,12 +2811,12 @@ snapshots:
     dependencies:
       '@babel/generator': 7.26.9
       '@babel/parser': 7.26.9
-      ansis: 3.16.0
+      ansis: 3.17.0
       diff: 7.0.0
 
-  '@tanstack/router-vite-plugin@1.112.0(@tanstack/react-router@1.112.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(vite@6.2.0(@types/node@22.13.8)(jiti@2.4.2)(lightningcss@1.25.1)(tsx@4.19.3))':
+  '@tanstack/router-vite-plugin@1.112.3(@tanstack/react-router@1.112.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(vite@6.2.0(@types/node@22.13.8)(jiti@2.4.2)(lightningcss@1.25.1)(tsx@4.19.3))':
     dependencies:
-      '@tanstack/router-plugin': 1.112.0(@tanstack/react-router@1.112.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(vite@6.2.0(@types/node@22.13.8)(jiti@2.4.2)(lightningcss@1.25.1)(tsx@4.19.3))
+      '@tanstack/router-plugin': 1.112.3(@tanstack/react-router@1.112.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(vite@6.2.0(@types/node@22.13.8)(jiti@2.4.2)(lightningcss@1.25.1)(tsx@4.19.3))
     transitivePeerDependencies:
       - '@rsbuild/core'
       - '@tanstack/react-router'
@@ -3171,7 +3171,7 @@ snapshots:
 
   ansi-styles@6.2.1: {}
 
-  ansis@3.16.0: {}
+  ansis@3.17.0: {}
 
   anymatch@3.1.3:
     dependencies:
@@ -3747,7 +3747,7 @@ snapshots:
 
   prettier@3.2.5: {}
 
-  prettier@3.5.2: {}
+  prettier@3.5.3: {}
 
   queue-microtask@1.2.3: {}
 
