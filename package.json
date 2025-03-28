@@ -32,7 +32,7 @@
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@unocss/reset": "^66.0.0",
-    "@vitejs/plugin-react-swc": "^3.8.0",
+    "@vitejs/plugin-react-swc": "^3.8.1",
     "rimraf": "^6.0.1",
     "typescript": "^5.8.2",
     "unocss": "^66.0.0",
