@@ -46,8 +46,8 @@ importers:
         specifier: ^19.1.6
         version: 19.1.6(@types/react@19.1.6)
       '@unocss/reset':
-        specifier: ^66.2.0
-        version: 66.2.0
+        specifier: ^66.2.1
+        version: 66.2.1
       '@vitejs/plugin-react-swc':
         specifier: ^3.10.1
         version: 3.10.1(vite@6.3.5(@types/node@24.0.1)(jiti@2.4.2)(lightningcss@1.25.1)(tsx@4.19.4))
@@ -851,6 +851,9 @@ packages:
 
   '@unocss/reset@66.2.0':
     resolution: {integrity: sha512-lANXvmU81Cmx5wo4Bwuw9VhOdOFzo/I2L0RCHSmH22m6+VQwG+ho9YONygf6AcN/ookyXX2F7si3CPM6Hkf4Cw==}
+
+  '@unocss/reset@66.2.1':
+    resolution: {integrity: sha512-gaEUsrRJ7UyWgbP89eFyilw6oHdgPMuLmTfz6Gu1eIKF1rxP6u2n4k/WsO5e+6ECUvEq0pYJluuWUNR8CkpW9Q==}
 
   '@unocss/rule-utils@66.2.0':
     resolution: {integrity: sha512-T2Gg8WwLeCi7QaOss6EKC5Ypmbls+dqet5sMRsiIE5Mi04j3ndS0+lTwV/x7X6NnN6kCoh0IlwCdBUU4tkJbkQ==}
@@ -2852,6 +2855,8 @@ snapshots:
       '@unocss/preset-wind3': 66.2.0
 
   '@unocss/reset@66.2.0': {}
+
+  '@unocss/reset@66.2.1': {}
 
   '@unocss/rule-utils@66.2.0':
     dependencies:
