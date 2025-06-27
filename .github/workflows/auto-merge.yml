@@ -2,6 +2,7 @@ name: Auto Merge
 
 on:
   pull_request:
+    types: [opened, synchronize, reopened, labeled]
 
 jobs:
   automerge:
@@ -10,10 +11,7 @@ jobs:
       pull-requests: write
       contents: write
     steps:
-      - uses: fastify/github-action-merge-dependabot@v3
-      # 或
-      # - uses: actions/checkout@v4
-      # - uses: ahmadnassri/action-dependabot-auto-merge@v2
+      - uses: ahmadnassri/action-dependabot-auto-merge@v2
         with:
-          target: 'react-ts,vue-ts'
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          target: 'react-ts,vue-ts'
