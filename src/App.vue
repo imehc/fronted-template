@@ -1,18 +1,14 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import NavigationBar from '~/components/NavigationBar.vue'
+import Breadcrumb from '~/components/Breadcrumb.vue'
+</script>
 
 <template>
-  <header>
-    <HelloWorld content="hello world" :year="new Date().getDay()" />
-    <hr />
-    <div class="wrapper">
-      <nav class="flex gap-x-3">
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-  <hr />
-  <RouterView />
+  <div id="app" class="min-h-screen flex flex-col">
+    <NavigationBar />
+    <Breadcrumb />
+    <main class="flex-1">
+      <RouterView />
+    </main>
+  </div>
 </template>
-
-<style scoped></style>
