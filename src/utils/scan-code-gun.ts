@@ -17,6 +17,8 @@ export interface ScanCodeGunConfig {
   suffix?: string
   /** 数据长度限制 */
   maxLength?: number
+  /** 最小数据长度 */
+  minLength?: number
   /** 数据格式验证正则 */
   pattern?: RegExp
   /** 超时时间(ms) */
@@ -103,6 +105,9 @@ class DefaultAdapter implements ScanCodeGunAdapter {
   }
 
   validateData(data: string, config: ScanCodeGunConfig): boolean {
+    if (config.minLength && data.length < config.minLength) {
+      return false
+    }
     if (config.maxLength && data.length > config.maxLength) {
       return false
     }
@@ -215,6 +220,7 @@ export class ScanCodeGunManager {
       maxCharInterval: 50, // 调整为50ms，适应扫码枪特征
       minDataLength: 3, // 调整为3字符，扫码枪通常至少3位
       maxDataLength: 50,
+      minLength: 6, // 默认最小长度6位
       enableContinuousScan: false,
       continuousScanInterval: 1000,
       maxContinuousScans: 10,
