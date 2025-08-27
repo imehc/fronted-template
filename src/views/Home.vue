@@ -21,7 +21,7 @@ const navigateTo = (route: string) => {
       </p>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-15 max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8 mb-15 max-w-7xl mx-auto">
       <div
         class="bg-white rounded-2xl p-8 cursor-pointer transition-all hover:-translate-y-2 hover:shadow-xl border-2 border-transparent hover:border-blue-500"
         @click="navigateTo('/basic-scan')">
@@ -60,6 +60,19 @@ const navigateTo = (route: string) => {
           <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">数据导出</span>
         </div>
       </div>
+
+      <div
+        class="bg-white rounded-2xl p-8 cursor-pointer transition-all hover:-translate-y-2 hover:shadow-xl border-2 border-transparent hover:border-green-500"
+        @click="navigateTo('/document-preview')">
+        <div class="text-5xl mb-5 text-center">📄</div>
+        <h3 class="text-2xl font-semibold mb-4 text-gray-800 text-center">文档预览</h3>
+        <p class="text-gray-600 leading-relaxed mb-5 text-center">在线预览PDF、Excel、Word文档，支持多种格式和交互功能</p>
+        <div class="flex flex-wrap gap-2 justify-center">
+          <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">PDF预览</span>
+          <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">Excel预览</span>
+          <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">Word预览</span>
+        </div>
+      </div>
     </div>
 
     <div class="bg-white rounded-2xl p-10 max-w-6xl mx-auto shadow-lg">
@@ -91,9 +104,9 @@ const navigateTo = (route: string) => {
           <p class="text-gray-600 leading-relaxed">支持成功、失败、连续扫码完成等多种回调函数</p>
         </div>
         <div class="text-center p-5">
-          <div class="text-4xl mb-4">🐛</div>
-          <h4 class="text-xl font-semibold mb-3 text-gray-800">调试模式</h4>
-          <p class="text-gray-600 leading-relaxed">提供详细的调试信息，便于问题排查</p>
+          <div class="text-4xl mb-4">📄</div>
+          <h4 class="text-xl font-semibold mb-3 text-gray-800">文档预览</h4>
+          <p class="text-gray-600 leading-relaxed">在线预览PDF、Excel、Word文档，支持分页和工作表切换</p>
         </div>
       </div>
     </div>

@@ -7,24 +7,29 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
     },
     {
       path: '/basic-scan',
       name: 'basic-scan',
-      component: () => import('~/views/BasicScan.vue')
+      component: () => import('~/views/BasicScan.vue'),
     },
     {
       path: '/callback-example',
       name: 'callback-example',
-      component: () => import('~/views/CallbackExample.vue')
+      component: () => import('~/views/CallbackExample.vue'),
     },
     {
       path: '/continuous-scan',
       name: 'continuous-scan',
-      component: () => import('~/views/ContinuousScan.vue')
+      component: () => import('~/views/ContinuousScan.vue'),
     },
-  ]
+    {
+      path: '/document-preview',
+      name: 'document-preview',
+      component: () => import('~/views/DeocumentDemo.vue'),
+    },
+  ],
 })
 
 export default router
