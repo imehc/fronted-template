@@ -41,7 +41,7 @@
     "npm-run-all2": "^8.0.4",
     "prettier": "^3.6.2",
     "tailwindcss": "^4.1.13",
-    "typescript": "^5.9.2",
+    "typescript": "^5.9.3",
     "typescript-eslint": "^8.45.0",
     "unplugin-auto-import": "^20.2.0",
     "unplugin-icons": "^22.3.0",
