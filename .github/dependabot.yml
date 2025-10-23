@@ -6,21 +6,38 @@
 
 version: 2
 updates:
-  - package-ecosystem: "github-actions" 
-    directory: "/" 
+  # GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
     schedule:
       interval: "daily"
 
+  # Root workspace
   - package-ecosystem: "npm"
     versioning-strategy: increase
     directory: "/"
     schedule:
       interval: "daily"
-    target-branch: "react-ts"
+    labels:
+      - "dependencies"
+      - "root"
 
+  # React TypeScript workspace
   - package-ecosystem: "npm"
     versioning-strategy: increase
-    directory: "/"
+    directory: "/react-ts"
     schedule:
       interval: "daily"
-    target-branch: "vue-ts"
+    labels:
+      - "dependencies"
+      - "react-ts"
+
+  # Vue TypeScript workspace
+  - package-ecosystem: "npm"
+    versioning-strategy: increase
+    directory: "/vue-ts"
+    schedule:
+      interval: "daily"
+    labels:
+      - "dependencies"
+      - "vue-ts"

@@ -1,0 +1,25 @@
+{
+  "name": "fronted-template",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev:vue": "pnpm --filter vue-template dev",
+    "build:vue": "pnpm --filter vue-template build",
+    "preview:vue": "pnpm --filter vue-template preview",
+    "test:vue": "pnpm --filter vue-template test:unit",
+    "lint:vue": "pnpm --filter vue-template lint",
+    "format:vue": "pnpm --filter vue-template format",
+    "dev:react": "pnpm --filter wlin-template dev",
+    "build:react": "pnpm --filter wlin-template build",
+    "preview:react": "pnpm --filter wlin-template preview",
+    "test:react": "pnpm --filter wlin-template test",
+    "lint:react": "pnpm --filter wlin-template lint",
+    "format:react": "pnpm --filter wlin-template format",
+    "install:all": "pnpm install"
+  },
+  "devDependencies": {
+    "pnpm": "^10.15.0"
+  },
+  "packageManager": "pnpm@10.15.1"
+}
