@@ -18,9 +18,6 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    labels:
-      - "dependencies"
-      - "root"
 
   # React TypeScript workspace
   - package-ecosystem: "npm"
@@ -28,9 +25,6 @@ updates:
     directory: "/react-ts"
     schedule:
       interval: "daily"
-    labels:
-      - "dependencies"
-      - "react-ts"
 
   # Vue TypeScript workspace
   - package-ecosystem: "npm"
@@ -38,6 +32,3 @@ updates:
     directory: "/vue-ts"
     schedule:
       interval: "daily"
-    labels:
-      - "dependencies"
-      - "vue-ts"
