@@ -29,7 +29,7 @@
     "@tanstack/router-devtools": "^1.133.25",
     "@tanstack/router-vite-plugin": "^1.133.25",
     "@types/node": "^24.0.4",
-    "@types/react": "^19.1.8",
+    "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
     "@unocss/reset": "^66.5.4",
     "@vitejs/plugin-react-swc": "^3.10.2",
