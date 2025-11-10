@@ -19,7 +19,7 @@
     "install:all": "pnpm install"
   },
   "devDependencies": {
-    "pnpm": "^10.20.0"
+    "pnpm": "^10.21.0"
   },
   "packageManager": "pnpm@10.15.1"
 }
