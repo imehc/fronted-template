@@ -23,7 +23,7 @@
     "react-dom": "^19.2.4"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.4.2",
+    "@biomejs/biome": "2.4.3",
     "@iconify/json": "^2.2.441",
     "@pandacss/dev": "^1.8.2",
     "@tanstack/router-devtools": "^1.161.3",
