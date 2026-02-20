@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.2",
-    "@iconify/json": "^2.2.440",
+    "@iconify/json": "^2.2.441",
     "@pandacss/dev": "^1.8.2",
     "@tanstack/router-devtools": "^1.161.3",
     "@tanstack/router-vite-plugin": "^1.161.1",
