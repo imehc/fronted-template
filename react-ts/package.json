@@ -20,7 +20,7 @@
     "@tanstack/react-router": "^1.169.2",
     "clsx": "^2.1.1",
     "react": "^19.2.5",
-    "react-dom": "^19.2.5"
+    "react-dom": "^19.2.6"
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.14",
