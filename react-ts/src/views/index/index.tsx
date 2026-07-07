@@ -1,14 +1,6 @@
 import { Link, Outlet } from "@tanstack/react-router";
-import { type FC, Suspense, lazy } from "react";
-
-const TanStackRouterDevtools =
-	process.env.NODE_ENV === "production"
-		? () => null
-		: lazy(() =>
-			import("@tanstack/router-devtools").then((res) => ({
-				default: res.TanStackRouterDevtools,
-			})),
-		);
+import { type FC, Suspense } from "react";
+import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
 
 const Index: FC = () => {
 	return (

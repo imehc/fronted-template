@@ -1,3 +1,7 @@
 packages:
-  - 'vue-ts'
-  - 'react-ts'
+  - vue-ts
+  - react-ts
+
+onlyBuiltDependencies:
+  - '@swc/core'
+  - esbuild
