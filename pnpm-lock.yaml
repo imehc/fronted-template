@@ -79,14 +79,14 @@ importers:
         specifier: ^14.3.0
         version: 14.3.0(vue@3.5.39(typescript@7.0.2))
       pinia:
-        specifier: ^4.0.1
-        version: 4.0.1(@vue/devtools-api@8.1.5)(typescript@7.0.2)(vue@3.5.39(typescript@7.0.2))
+        specifier: ^4.0.2
+        version: 4.0.2(@vue/devtools-api@8.1.5)(typescript@7.0.2)(vue@3.5.39(typescript@7.0.2))
       vue:
         specifier: ^3.5.39
         version: 3.5.39(typescript@7.0.2)
       vue-router:
         specifier: ^5.1.0
-        version: 5.1.0(@vue/compiler-sfc@3.5.39)(pinia@4.0.1(@vue/devtools-api@8.1.5)(typescript@7.0.2)(vue@3.5.39(typescript@7.0.2)))(rolldown@1.1.5)(vite@8.1.4(@types/node@26.1.1)(jiti@2.7.0)(yaml@2.9.0))(vue@3.5.39(typescript@7.0.2))
+        version: 5.1.0(@vue/compiler-sfc@3.5.39)(pinia@4.0.2(@vue/devtools-api@8.1.5)(typescript@7.0.2)(vue@3.5.39(typescript@7.0.2)))(rolldown@1.1.5)(vite@8.1.4(@types/node@26.1.1)(jiti@2.7.0)(yaml@2.9.0))(vue@3.5.39(typescript@7.0.2))
     devDependencies:
       '@eslint/js':
         specifier: ^10.0.1
@@ -3103,8 +3103,8 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  pinia@4.0.1:
-    resolution: {integrity: sha512-0T9mU4aDENt40cnJLxYLkqr1Fwqao2CHCL5H65jCSjnL0kOsvARc+PYydwEw2YfQ0VObzwjMNFwzDr+q7n/nnQ==}
+  pinia@4.0.2:
+    resolution: {integrity: sha512-yKVVA7bSj5oRZFp/Ab9wLlmyb5gPUYEiIm4ryiWTe/xe7PtkRdMVOp1X1ggvq0c6Uj7Q0Du1HnV2mtAwM0Ks1g==}
     peerDependencies:
       '@vue/devtools-api': ^8.1.5
       typescript: '>=5.6.0'
@@ -6928,7 +6928,7 @@ snapshots:
 
   pidtree@1.0.0: {}
 
-  pinia@4.0.1(@vue/devtools-api@8.1.5)(typescript@7.0.2)(vue@3.5.39(typescript@7.0.2)):
+  pinia@4.0.2(@vue/devtools-api@8.1.5)(typescript@7.0.2)(vue@3.5.39(typescript@7.0.2)):
     dependencies:
       '@vue/devtools-api': 8.1.5
       nostics: 1.1.4
@@ -7657,7 +7657,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  vue-router@5.1.0(@vue/compiler-sfc@3.5.39)(pinia@4.0.1(@vue/devtools-api@8.1.5)(typescript@7.0.2)(vue@3.5.39(typescript@7.0.2)))(rolldown@1.1.5)(vite@8.1.4(@types/node@26.1.1)(jiti@2.7.0)(yaml@2.9.0))(vue@3.5.39(typescript@7.0.2)):
+  vue-router@5.1.0(@vue/compiler-sfc@3.5.39)(pinia@4.0.2(@vue/devtools-api@8.1.5)(typescript@7.0.2)(vue@3.5.39(typescript@7.0.2)))(rolldown@1.1.5)(vite@8.1.4(@types/node@26.1.1)(jiti@2.7.0)(yaml@2.9.0))(vue@3.5.39(typescript@7.0.2)):
     dependencies:
       '@babel/generator': 8.0.0
       '@vue-macros/common': 3.1.2(vue@3.5.39(typescript@7.0.2))
@@ -7679,7 +7679,7 @@ snapshots:
       yaml: 2.9.0
     optionalDependencies:
       '@vue/compiler-sfc': 3.5.39
-      pinia: 4.0.1(@vue/devtools-api@8.1.5)(typescript@7.0.2)(vue@3.5.39(typescript@7.0.2))
+      pinia: 4.0.2(@vue/devtools-api@8.1.5)(typescript@7.0.2)(vue@3.5.39(typescript@7.0.2))
       vite: 8.1.4(@types/node@26.1.1)(jiti@2.7.0)(yaml@2.9.0)
     transitivePeerDependencies:
       - '@farmfe/core'
