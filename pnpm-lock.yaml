@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       pnpm:
-        specifier: ^11.17.0
-        version: 11.17.0
+        specifier: ^11.18.0
+        version: 11.18.0
 
   react-ts:
     dependencies:
@@ -2631,8 +2631,8 @@ packages:
     resolution: {integrity: sha512-AC/7JofJvZGrrneWNaEnJeOLUx+JlGt7tNa0wZiRPT4MY1wmfKjt2+6O2p2uz2+skll8OZZmJMNqeke7kKbNgQ==}
     hasBin: true
 
-  jose@6.2.4:
-    resolution: {integrity: sha512-N8acGzVsQy6M/fjFcxtysNc4Q379TcM5dM/qKkNtsHFji88yANnXTr7BLeP75iPnFwBfQzM/jg2BZ9+HZrHCZA==}
+  jose@6.2.5:
+    resolution: {integrity: sha512-2E5L2yRp03FnwreJLJX8/r7mHiZICCf8kG7fAsTWkSQTDAcc46NIZoQLKy+EJ8sPoJlxyS4OQR5H70LjIZZlIQ==}
 
   js-beautify@1.15.4:
     resolution: {integrity: sha512-9/KXeZUKKJwqCXUdBxFJ3vPh467OCckSBmYDwSK/EtV090K+iMJ7zx2S3HLVDIWFQdqMIsZWbnaGiba18aWhaA==}
@@ -3215,8 +3215,8 @@ packages:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}
     engines: {node: '>=4'}
 
-  pnpm@11.17.0:
-    resolution: {integrity: sha512-zKPOozKtJUu4QUX5ZtGfSHlhUhA0b8kseaBH8joNezzKPDeS8AdrofGDHSd++88KkRmzGppg7Kf7PWIx8zHvcg==}
+  pnpm@11.18.0:
+    resolution: {integrity: sha512-M9g8d9qC9J+6g2klxvG4QRgewxMrZwY5vQEvcHX1x89jTF+HAUfBmq50ePrAHfCdiJLogEVIlu3SPumzN1dWPA==}
     engines: {node: '>=22.13'}
     hasBin: true
 
@@ -4598,7 +4598,7 @@ snapshots:
       express: 5.2.1
       express-rate-limit: 8.6.1(express@5.2.1)
       hono: 4.12.32
-      jose: 6.2.4
+      jose: 6.2.5
       json-schema-typed: 8.0.2
       pkce-challenge: 5.0.1
       raw-body: 3.0.2
@@ -6625,7 +6625,7 @@ snapshots:
 
   jiti@2.7.0: {}
 
-  jose@6.2.4:
+  jose@6.2.5:
     optional: true
 
   js-beautify@1.15.4:
@@ -7155,7 +7155,7 @@ snapshots:
 
   pluralize@8.0.0: {}
 
-  pnpm@11.17.0: {}
+  pnpm@11.18.0: {}
 
   postcss-discard-duplicates@7.0.2(postcss@8.5.14):
     dependencies:
