@@ -11,6 +11,8 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+      time: "08:00"
+      timezone: "Asia/Shanghai"
 
   # React TypeScript workspace
   - package-ecosystem: "npm"
@@ -18,6 +20,8 @@ updates:
     directory: "/react-ts"
     schedule:
       interval: "daily"
+      time: "08:10"
+      timezone: "Asia/Shanghai"
 
   # Vue TypeScript workspace
   - package-ecosystem: "npm"
@@ -25,3 +29,5 @@ updates:
     directory: "/vue-ts"
     schedule:
       interval: "daily"
+      time: "08:20"
+      timezone: "Asia/Shanghai"
