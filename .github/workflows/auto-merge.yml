@@ -1,5 +1,8 @@
 name: Auto Merge Dependabot PRs
 
+# 只保留 pull_request_target 一个触发源。
+# 不监听 check_suite / workflow_run，避免"任意 workflow 完成"反复触发同一 PR，
+# 导致 auto-merge（含 approve）被重复执行多次。
 on:
   pull_request_target:
     types:
@@ -7,13 +10,11 @@ on:
       - synchronize
       - reopened
       - labeled
-  check_suite:
-    types:
-      - completed
-  workflow_run:
-    workflows: ["*"]
-    types:
-      - completed
+
+# 同一 PR 的多次触发合并为一个并发组，防止并发运行重复 approve/merge。
+concurrency:
+  group: auto-merge-dependabot-${{ github.event.pull_request.number }}
+  cancel-in-progress: false
 
 jobs:
   auto-merge:
@@ -25,8 +26,17 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      - name: Approve Dependabot PR
-        run: gh pr review "$PR_URL" --approve
+      # 判断本次 PR 是否已由本 bot（github-actions）批准过；
+      # 已批准则跳过，避免对同一 PR 重复 approve。
+      - name: Approve Dependabot PR (idempotent)
+        run: |
+          PR_URL="${{ github.event.pull_request.html_url }}"
+          ALREADY=$(gh pr view "$PR_URL" --json reviews --jq '[.reviews[] | select(.author.login == "github-actions" and .state == "APPROVED")] | length')
+          if [ "$ALREADY" -eq 0 ]; then
+            gh pr review "$PR_URL" --approve
+          else
+            echo "Already approved by github-actions, skip."
+          fi
         env:
           PR_URL: ${{ github.event.pull_request.html_url }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
