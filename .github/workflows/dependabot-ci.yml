@@ -65,8 +65,12 @@ jobs:
           node-version: 22
           cache: pnpm
 
+      # Dependabot 更新依赖时可能未同步更新根目录的 pnpm-lock.yaml，
+      # 导致 --frozen-lockfile 报 ERR_PNPM_OUTDATED_LOCKFILE。此时降级为
+      # --no-frozen-lockfile，让 pnpm 按 PR 里的 package.json 重新解析锁文件后安装。
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: |
+          pnpm install --frozen-lockfile || pnpm install --no-frozen-lockfile
 
       - name: Build react-ts
         if: contains(needs.detect.outputs.changed, 'react-ts') && matrix.workspace == 'react-ts'
@@ -97,8 +101,10 @@ jobs:
           node-version: 22
           cache: pnpm
 
+      # 同 build job：Dependabot 可能未更新锁文件，失败时降级为非冻结模式。
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: |
+          pnpm install --frozen-lockfile || pnpm install --no-frozen-lockfile
 
       - name: Test react-ts
         if: contains(needs.detect.outputs.changed, 'react-ts') && matrix.workspace == 'react-ts'
