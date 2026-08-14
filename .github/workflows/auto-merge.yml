@@ -7,9 +7,6 @@ on:
       - synchronize
       - reopened
       - labeled
-  pull_request_review:
-    types:
-      - submitted
   check_suite:
     types:
       - completed
@@ -26,6 +23,55 @@ jobs:
       pull-requests: write
       contents: write
     steps:
-      - uses: fastify/github-action-merge-dependabot@v3
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v4
+
+      - name: Approve Dependabot PR
+        run: gh pr review "$PR_URL" --approve
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # 判断本次 PR 是否改了 react-ts / vue-ts 的应用依赖。
+      # 只有改了这些目录才需要执行 build/test 校验；
+      # 仅更新 GitHub Actions（.github/**）时跳过校验直接合并。
+      - name: Detect app dependency changes
+        id: build-changed
+        run: |
+          PR_URL="${{ github.event.pull_request.html_url }}"
+          FILES=$(gh pr view "$PR_URL" --json files --jq '.files[].path')
+          CHANGED=false
+          if echo "$FILES" | grep -qE '^(react-ts|vue-ts)/'; then
+            CHANGED=true
+          fi
+          echo "changed=$CHANGED" >> "$GITHUB_OUTPUT"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # 等待并核对依赖更新涉及的 build / test 检查是否全部通过。
+      # 未改动的 workspace 其 check 为空跑成功，因此统一校验这四个 check 全成功。
+      - name: Wait for and verify required checks
+        if: steps.build-changed.outputs.changed == 'true'
+        id: checks
+        run: |
+          PR_URL="${{ github.event.pull_request.html_url }}"
+          gh pr checks "$PR_URL" --watch --interval 30
+
+          STATE=$(gh pr checks "$PR_URL" --json name,state --jq '
+            ([.[] | select(.name | IN("react-ts build","react-ts test","vue-ts build","vue-ts test")) | select(.state == "SUCCESS")] | length) as $ok |
+            if $ok == 4 then "passed" else "failed" end
+          ')
+          echo "required-checks-state=$STATE" >> "$GITHUB_OUTPUT"
+          if [ "$STATE" != "passed" ]; then
+            echo "::error::Required checks (react-ts/vue-ts build+test) did not all pass"
+            exit 1
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # 依赖更新通过校验，或仅 actions 更新（无需构建）时自动合并。
+      - name: Merge Dependabot PR
+        if: steps.build-changed.outputs.changed == 'false' || steps.checks.outputs.required-checks-state == 'passed'
+        run: gh pr merge "$PR_URL" --squash --auto
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

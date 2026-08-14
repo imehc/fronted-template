@@ -12,13 +12,6 @@ updates:
     schedule:
       interval: "daily"
 
-  # Root workspace
-  - package-ecosystem: "npm"
-    versioning-strategy: increase
-    directory: "/"
-    schedule:
-      interval: "daily"
-
   # React TypeScript workspace
   - package-ecosystem: "npm"
     versioning-strategy: increase

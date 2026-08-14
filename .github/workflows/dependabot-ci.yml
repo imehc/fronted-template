@@ -1,0 +1,109 @@
+name: Dependabot CI
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'react-ts/**'
+      - 'vue-ts/**'
+      - '.github/**'
+
+concurrency:
+  group: dependabot-ci-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  # 检测本次 PR 修改了哪个 workspace，供 build / test 按目录运行。
+  detect:
+    name: Detect changed workspace
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.set.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Detect changed workspace
+        id: filter
+        uses: dorny/paths-filter@v3
+        with:
+          filters: |
+            react-ts:
+              - 'react-ts/**'
+            vue-ts:
+              - 'vue-ts/**'
+
+      - name: Compute changed workspace set
+        id: set
+        run: |
+          CHANGED=""
+          [ "${{ steps.filter.outputs.react-ts }}" = "true" ] && CHANGED="$CHANGED react-ts"
+          [ "${{ steps.filter.outputs.vue-ts }}" = "true" ] && CHANGED="$CHANGED vue-ts"
+          echo "changed=${CHANGED:-none}" >> "$GITHUB_OUTPUT"
+
+  # 按目录产生对应 check：react-ts build / vue-ts build
+  build:
+    name: ${{ matrix.workspace }} build
+    needs: detect
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        workspace: [react-ts, vue-ts]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.15.1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build react-ts
+        if: contains(needs.detect.outputs.changed, 'react-ts') && matrix.workspace == 'react-ts'
+        run: pnpm build:react
+
+      - name: Build vue-ts
+        if: contains(needs.detect.outputs.changed, 'vue-ts') && matrix.workspace == 'vue-ts'
+        run: pnpm build:vue
+
+  # 按目录产生对应 check：react-ts test / vue-ts test
+  test:
+    name: ${{ matrix.workspace }} test
+    needs: detect
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        workspace: [react-ts, vue-ts]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.15.1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Test react-ts
+        if: contains(needs.detect.outputs.changed, 'react-ts') && matrix.workspace == 'react-ts'
+        run: pnpm test:react
+
+      - name: Test vue-ts
+        if: contains(needs.detect.outputs.changed, 'vue-ts') && matrix.workspace == 'vue-ts'
+        run: pnpm test:vue
