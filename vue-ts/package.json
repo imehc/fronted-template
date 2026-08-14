@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@iconify/json": "^2.2.510",
+    "@iconify/json": "^2.2.514",
     "@tailwindcss/vite": "^4.3.3",
     "@tsconfig/node20": "^20.1.9",
     "@types/jsdom": "^30.0.0",
