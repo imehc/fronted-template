@@ -78,14 +78,21 @@ jobs:
                | select(.name | IN("react-ts build", "react-ts test", "vue-ts build", "vue-ts test"))
                | {name, status, conclusion}]')
 
+            COUNT=$(echo "$NAMES" | jq 'length')
             SUCCESS=$(echo "$NAMES" | jq '[.[] | select(.conclusion == "success")] | length')
             FAILED=$(echo "$NAMES" | jq '[.[] | select(.conclusion != "success" and .conclusion != null)] | length')
             PENDING=$(echo "$NAMES" | jq '[.[] | select(.conclusion == null or .status == "in_progress" or .status == "queued")] | length')
 
-            echo "checks: success=$SUCCESS failed=$FAILED pending=$PENDING"
+            echo "checks: count=$COUNT success=$SUCCESS failed=$FAILED pending=$PENDING"
             if [ "$SUCCESS" -eq 4 ]; then
               echo "required-checks-state=passed" >> "$GITHUB_OUTPUT"
               exit 0
+            fi
+            # 4 个 check 尚未全部创建（workflow 刚被触发，check 还在排队/未上报），
+            # 不能判定失败，应继续等待。
+            if [ "$COUNT" -lt 4 ]; then
+              sleep 30
+              continue
             fi
             if [ "$FAILED" -gt 0 ]; then
               echo "::error::One or more required checks failed."
