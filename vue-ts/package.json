@@ -23,7 +23,7 @@
     "@eslint/js": "^10.0.1",
     "@iconify/json": "^2.2.514",
     "@tailwindcss/vite": "^4.3.3",
-    "@tsconfig/node20": "^20.1.9",
+    "@tsconfig/node20": "^20.1.10",
     "@types/jsdom": "^30.0.0",
     "@types/node": "^26.2.0",
     "@vitejs/plugin-vue": "^6.0.8",
