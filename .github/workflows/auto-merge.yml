@@ -59,22 +59,50 @@ jobs:
 
       # 等待并核对依赖更新涉及的 build / test 检查是否全部通过。
       # 未改动的 workspace 其 check 为空跑成功，因此统一校验这四个 check 全成功。
+      # 注意：不能用 `gh pr checks --watch`——它会把本 workflow 自身的 auto-merge
+      # check（永远处于 pending）也算进去，导致自我等待死锁直至 6h 超时。
+      # 改为用 gh api 轮询，并显式排除名为 "auto-merge" 的 check。
       - name: Wait for and verify required checks
         if: steps.build-changed.outputs.changed == 'true'
         id: checks
         run: |
-          PR_URL="${{ github.event.pull_request.html_url }}"
-          gh pr checks "$PR_URL" --watch --interval 30
+          REPO="${{ github.repository }}"
+          HEAD_SHA="${{ github.event.pull_request.head.sha }}"
 
-          STATE=$(gh pr checks "$PR_URL" --json name,state --jq '
-            ([.[] | select(.name | IN("react-ts build","react-ts test","vue-ts build","vue-ts test")) | select(.state == "SUCCESS")] | length) as $ok |
-            if $ok == 4 then "passed" else "failed" end
-          ')
-          echo "required-checks-state=$STATE" >> "$GITHUB_OUTPUT"
-          if [ "$STATE" != "passed" ]; then
-            echo "::error::Required checks (react-ts/vue-ts build+test) did not all pass"
-            exit 1
-          fi
+          # 轮询直到要求的 4 个 check 全部成功；失败或超时（10min）则退出。
+          # 只统计这 4 个 check 名，auto-merge 自身（永远 pending）天然不在其中，
+          # 因此不会像 `gh pr checks --watch` 那样自我等待死锁。
+          for i in $(seq 1 20); do
+            NAMES=$(gh api "/repos/$REPO/commits/$HEAD_SHA/check-runs" --jq '
+              [.check_runs[]
+               | select(.name | IN("react-ts build", "react-ts test", "vue-ts build", "vue-ts test"))
+               | {name, status, conclusion}]')
+
+            SUCCESS=$(echo "$NAMES" | jq '[.[] | select(.conclusion == "success")] | length')
+            FAILED=$(echo "$NAMES" | jq '[.[] | select(.conclusion != "success" and .conclusion != null)] | length')
+            PENDING=$(echo "$NAMES" | jq '[.[] | select(.conclusion == null or .status == "in_progress" or .status == "queued")] | length')
+
+            echo "checks: success=$SUCCESS failed=$FAILED pending=$PENDING"
+            if [ "$SUCCESS" -eq 4 ]; then
+              echo "required-checks-state=passed" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            if [ "$FAILED" -gt 0 ]; then
+              echo "::error::One or more required checks failed."
+              echo "required-checks-state=failed" >> "$GITHUB_OUTPUT"
+              exit 1
+            fi
+            if [ "$PENDING" -eq 0 ]; then
+              echo "::error::Required checks finished but not all passed."
+              echo "required-checks-state=failed" >> "$GITHUB_OUTPUT"
+              exit 1
+            fi
+            sleep 30
+          done
+
+          echo "::error::Timed out waiting for required checks."
+          echo "required-checks-state=failed" >> "$GITHUB_OUTPUT"
+          exit 1
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
