@@ -28,7 +28,7 @@
     "@pandacss/dev": "^2.1.0",
     "@tanstack/react-router-devtools": "^1.167.2",
     "@tanstack/router-plugin": "^1.168.41",
-    "@types/node": "^26.6.3",
+    "@types/node": "^26.6.4",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.2.7",
     "@unocss/reset": "^66.10.5",
