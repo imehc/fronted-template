@@ -4,10 +4,7 @@ on:
   pull_request:
     branches:
       - main
-    paths:
-      - 'react-ts/**'
-      - 'vue-ts/**'
-      - '.github/**'
+    # 所有 PR 都必须上报 main 分支保护要求的四项检查。
 
 concurrency:
   group: dependabot-ci-${{ github.head_ref || github.ref }}
@@ -33,8 +30,10 @@ jobs:
           filters: |
             react-ts:
               - 'react-ts/**'
+              - 'pnpm-lock.yaml'
             vue-ts:
               - 'vue-ts/**'
+              - 'pnpm-lock.yaml'
 
       - name: Compute changed workspace set
         id: set
